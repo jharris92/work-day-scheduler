@@ -18,3 +18,24 @@ function timeBlockColor() {
         
     })
 };
+
+saveBtn.on("click", function(){
+    var time = $(this).sibilings(".hour").text();
+    var plan = $(this).sibilings(".plan").val();
+
+    localStorage.setItem(time,plan);
+});
+
+function usePlanner() {
+    $(".hour").each(function(){
+        var currHour = $(this).text();
+        var currPlan = localStorage.getItem(currHour);
+
+        if(currPlan !== null) {
+            $(this).sibilings(".plan").val(currPlan);
+        }
+    });
+}
+
+timeBlockColor();
+usePlanner();
