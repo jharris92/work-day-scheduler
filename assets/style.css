@@ -73,3 +73,22 @@ textarea {
   font-size: 25px;
   transition: all .3s ease-in-out;
 }
+
+footer {
+  background:red;
+  width: 100%;
+  padding: 40px 35px;
+}
+
+footer h2 {
+  display: center;
+  color: white;
+  font-size: 30px;
+  margin: 0;
+}
+
+footer div {
+  float: center;
+  line-height: 1.5;
+  text-align: center;
+}
